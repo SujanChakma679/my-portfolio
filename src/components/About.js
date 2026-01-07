@@ -37,9 +37,9 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-stretch">
           {/* Left Column - Personal Info */}
-          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20">
+          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20 flex flex-col">
             <h3 className="text-2xl font-semibold text-white mb-6">Who I Am</h3>
             <div className="space-y-4 text-gray-300">
               <p className="leading-relaxed">
@@ -67,7 +67,7 @@ const About = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className="grid grid-cols-2 gap-4 mt-auto pt-8">
               <div className="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-purple-400/10 text-center">
                 <div className="text-2xl font-bold text-primary mb-1">10+</div>
                 <div className="text-gray-300 text-sm">Projects</div>
@@ -88,20 +88,52 @@ const About = () => {
           </div>
 
           {/* Right Column - Learning Journey Timeline */}
-          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20">
-            <h3 className="text-2xl font-semibold text-white mb-6">Learning Journey</h3>
-            <div className="space-y-6">
-              {learningJourney.map((exp, index) => (
-                <div key={index} className="relative pl-6 border-l-2 border-primary/30 last:border-l-0">
-                  <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
-                  <div className="space-y-2">
-                    <h4 className="text-lg font-semibold text-white">{exp.title}</h4>
-                    <p className="text-primary font-medium">{exp.institution}</p>
-                    <p className="text-sm text-gray-400">{exp.period}</p>
-                    <p className="text-gray-300 text-sm leading-relaxed">{exp.description}</p>
+          <div className="space-y-8">
+            {/* Learning Journey */}
+            <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20">
+              <h3 className="text-2xl font-semibold text-white mb-6">Learning Journey</h3>
+              <div className="space-y-6">
+                {learningJourney.map((exp, index) => (
+                  <div key={index} className="relative pl-6 border-l-2 border-primary/30 last:border-l-0">
+                    <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
+                    <div className="space-y-2">
+                      <h4 className="text-lg font-semibold text-white">{exp.title}</h4>
+                      <p className="text-primary font-medium">{exp.institution}</p>
+                      <p className="text-sm text-gray-400">{exp.period}</p>
+                      <p className="text-gray-300 text-sm leading-relaxed">{exp.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Beyond Code Section */}
+            <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20">
+              <h3 className="text-2xl font-semibold text-white mb-6">Interests Beyond Coding</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl">📚</div>
+                  <div>
+                    <h4 className="text-base font-semibold text-primary mb-1">Reading</h4>
+                    <p className="text-gray-400 text-sm">Supporting lifelong learning, staying updated, and personal growth</p>
                   </div>
                 </div>
-              ))}
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl">🧘</div>
+                  <div>
+                    <h4 className="text-base font-semibold text-primary mb-1">Yoga</h4>
+                    <p className="text-gray-400 text-sm">Maintaining physical health, balance, and a strong mind–body connection</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl">🧘‍♂️</div>
+                  <div>
+                    <h4 className="text-base font-semibold text-primary mb-1">Meditation</h4>
+                    <p className="text-gray-400 text-sm">Cultivating inner peace, focus, and mental clarity</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
