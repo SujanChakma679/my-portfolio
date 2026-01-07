@@ -30,7 +30,7 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
    npm start
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. 🔗 Live Demo: https://statuesque-donut-e11351.netlify.app/
 
 ## Available Scripts
 
