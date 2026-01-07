@@ -1,6 +1,6 @@
-# Meriem's Portfolio - React Version
+# Sujan Chakma’s Portfolio – React Version
 
-A modern, responsive portfolio website built with React and Tailwind CSS, featuring a mobile-first design with dark mode support.
+A modern, responsive portfolio website built with React and Tailwind CSS, showcasing my skills, projects, and professional journey. Designed with a mobile-first approach, dark mode support, and modern UI animations.
 
 ## Features
 
