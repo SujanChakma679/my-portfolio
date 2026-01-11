@@ -120,14 +120,14 @@ const About = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl">🧘</div>
+                  <div className="text-3xl">🕉️</div>
                   <div>
                     <h4 className="text-base font-semibold text-primary mb-1">Yoga</h4>
                     <p className="text-gray-400 text-sm">Maintaining physical health, balance, and a strong mind–body connection</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl">🧘‍♂️</div>
+                  <div className="text-3xl">☯️</div>
                   <div>
                     <h4 className="text-base font-semibold text-primary mb-1">Meditation</h4>
                     <p className="text-gray-400 text-sm">Cultivating inner peace, focus, and mental clarity</p>
