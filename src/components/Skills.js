@@ -60,7 +60,7 @@ const Skills = () => {
     <section id="skills" className="py-12 px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             My <span className="text-gradient">Skills</span>
           </h2>
@@ -72,7 +72,7 @@ const Skills = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {skills.map((skillGroup, groupIndex) => (
-            <div key={groupIndex} className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20">
+            <div key={groupIndex} className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20 hover-lift" data-aos="fade-up" data-aos-delay={groupIndex * 100}>
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-semibold text-primary mb-2">{skillGroup.category}</h3>
                 <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-primary mx-auto rounded-full"></div>
@@ -80,7 +80,7 @@ const Skills = () => {
               
               <div className="space-y-6">
                 {skillGroup.technologies.map((tech, techIndex) => (
-                  <div key={techIndex} className="space-y-3">
+                  <div key={techIndex} className="space-y-3 hover:bg-white/5 p-3 rounded-lg transition-all duration-300 hover:transform hover:scale-105">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         {tech.isImage ? (
@@ -92,9 +92,9 @@ const Skills = () => {
                       </div>
                       <span className="text-gray-400 text-sm font-medium">{tech.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-700/50 rounded-full h-2.5">
+                    <div className="w-full bg-gray-700/50 rounded-full h-2.5 overflow-hidden">
                       <div 
-                        className="bg-gradient-to-r from-purple-600 to-primary h-2.5 rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-purple-600 to-primary h-2.5 rounded-full transition-all duration-1000 ease-out skill-progress hover:shadow-[0_0_10px_rgba(217,70,239,0.5)]"
                         style={{ width: `${tech.level}%` }}
                       ></div>
                     </div>
@@ -106,7 +106,7 @@ const Skills = () => {
         </div>
 
         {/* Certifications & Achievements */}
-        <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20">
+        <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20" data-aos="fade-up" data-aos-delay="200">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-semibold text-white mb-2">Certifications & Achievements</h3>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-primary mx-auto rounded-full"></div>
@@ -114,7 +114,7 @@ const Skills = () => {
           
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {certifications.map((cert, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-purple-400/10 text-center hover:border-purple-400/30 transition-all duration-300 hover:transform hover:scale-105">
+              <div key={index} className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-purple-400/10 text-center hover:border-purple-400/30 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-[0_10px_30px_rgba(217,70,239,0.2)]" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="text-4xl mb-4">{cert.icon}</div>
                 <h4 className="text-white font-semibold mb-3 text-base">{cert.title}</h4>
                 <p className="text-primary text-sm font-medium mb-2">{cert.issuer}</p>
@@ -125,26 +125,26 @@ const Skills = () => {
         </div>
 
         {/* Skills Summary */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20">
+        <div className="mt-16 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/30 transition-all duration-300">
             <h3 className="text-2xl font-semibold text-white mb-6">How I Add Value</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="space-y-3">
+              <div className="space-y-3 hover:transform hover:scale-105 transition-all duration-300">
                 <div className="text-4xl">🚀</div>
                 <h4 className="text-lg font-semibold text-primary">Performance</h4>
                 <p className="text-gray-300 text-sm">Optimized, fast-loading applications with clean, maintainable code</p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 hover:transform hover:scale-105 transition-all duration-300">
                 <div className="text-4xl">📱</div>
                 <h4 className="text-lg font-semibold text-primary">Responsive Design</h4>
                 <p className="text-gray-300 text-sm">Mobile-first approach ensuring great UX across all devices</p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 hover:transform hover:scale-105 transition-all duration-300">
                 <div className="text-4xl">🛡️</div>
                 <h4 className="text-lg font-semibold text-primary">Security</h4>
                 <p className="text-gray-300 text-sm">Secure authentication, data protection, and API security best practices</p>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 hover:transform hover:scale-105 transition-all duration-300">
                 <div className="text-4xl">🔧</div>
                 <h4 className="text-lg font-semibold text-primary">Full Stack</h4>
                 <p className="text-gray-300 text-sm">End-to-end development from database to user interface</p>

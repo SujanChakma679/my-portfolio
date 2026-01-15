@@ -48,10 +48,10 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-12 px-8">
+    <section id="projects" className="py-12 px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             My <span className="text-gradient">Projects</span>
           </h2>
@@ -62,7 +62,7 @@ const Projects = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="100">
           {filters.map((filter) => (
             <button
               key={filter.id}
@@ -80,11 +80,13 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105"
+              className="group bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-[0_10px_40px_rgba(217,70,239,0.2)]"
+              data-aos="fade-up"
+              data-aos-delay={project.id * 100}
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
@@ -146,13 +148,13 @@ const Projects = () => {
                 <div className="flex gap-3">
                   <a
                     href={project.githubUrl}
-                    className="flex-1 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-center border border-purple-400/20 hover:border-purple-400/40"
+                    className="flex-1 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-center border border-purple-400/20 hover:border-purple-400/40 hover:transform hover:scale-105"
                   >
                     Repository
                   </a>
                   <a
                     href={project.liveUrl}
-                    className="flex-1 bg-gradient-to-r from-purple-600 to-primary hover:from-purple-700 hover:to-primary text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-center shadow-[0_0_15px_rgba(217,70,239,0.3)]"
+                    className="flex-1 bg-gradient-to-r from-purple-600 to-primary hover:from-purple-700 hover:to-primary text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-center shadow-[0_0_15px_rgba(217,70,239,0.3)] hover:shadow-[0_0_25px_rgba(217,70,239,0.5)] hover:transform hover:scale-105"
                   >
                     Demo
                   </a>

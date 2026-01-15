@@ -9,11 +9,21 @@ import Footer from './components/Footer';
 import BackgroundEffects from './components/BackgroundEffects';
 import LoadingScreen from './components/LoadingScreen';
 import ScrollProgress from './components/ScrollProgress';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100
+    });
+
     // Configure Tailwind with proper dark mode setup
     if (window.tailwind) {
       window.tailwind.config = {
